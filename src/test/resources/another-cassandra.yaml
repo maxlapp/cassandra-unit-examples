@@ -104,10 +104,6 @@ concurrent_writes: 4
 # By default this will be set to the amount of data directories defined.
 #memtable_flush_writers: 1
 
-# Buffer size to use when performing contiguous column slices. 
-# Increase this to the size of the column slices you typically perform
-sliced_buffer_size_in_kb: 64
-
 # TCP port, for commands and data
 storage_port: 7000
 
@@ -173,8 +169,8 @@ column_index_size_in_kb: 64
 # will be logged specifying the row key.
 in_memory_compaction_limit_in_mb: 16
 
-# Time to wait for a reply from other nodes before failing the command 
-rpc_timeout_in_ms: 10000
+# Time to wait for a reply from other nodes before failing the command
+request_timeout_in_ms: 10000
 
 # phi value that must be reached for a host to be marked down.
 # most users should never need to adjust this.
